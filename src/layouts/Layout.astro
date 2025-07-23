@@ -15,10 +15,12 @@ import Footer from "../components/Footer.astro";
     <title>Astro Basics</title>
   </head>
   <body>
-    <Header />
-    <main class="p-4">
-      <slot />
-    </main>
-    <Footer />
+    <div id="wrapper" class="flex flex-col min-h-screen">
+      <Header />
+      <main class="container p-4 grow">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>

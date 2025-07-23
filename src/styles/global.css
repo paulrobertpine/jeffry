@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-/* 
-colours
-melon: #f5b58c
-coral: #f5918c
-mint: #8bf4d6
-forest: #2b7a64
-earth: #756256
-darkearth: #755756
- */
-
 @theme {
   --color-melon: #f5b58c;
   --color-coral: #f5918c;
@@ -28,15 +18,22 @@ body {
   font-family: "Instrument Sans", sans-serif;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 main {
   @apply container mx-auto;
 
   h1 {
     @apply text-3xl font-bold my-4;
+    color: var(--color-darkearth);
   }
 
   h2 {
     @apply text-2xl font-bold my-4;
+    color: var(--color-darkearth);
+    border-bottom: 2px dotted var(--color-forest);
   }
 
   p {
@@ -49,6 +46,22 @@ main {
   }
 
   a {
-    @apply text-coral hover:text-pink-700 underline;
+    @apply text-coral underline;
+  }
+}
+
+.mintbox {
+  @apply bg-mint;
+  color: var(--color-textearth);
+  a {
+    color: var(--color-textearth);
+  }
+}
+
+.forestbox {
+  @apply bg-forest;
+  color: white;
+  a {
+    color: var(--color-melon);
   }
 }
