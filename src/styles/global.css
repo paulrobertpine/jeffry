@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes: light --default;
+  /* themes: false; */
+}
 
 @theme {
   --color-melon: #f5b58c;
@@ -26,12 +31,12 @@ main {
   @apply container mx-auto;
 
   h1 {
-    @apply text-3xl font-bold my-4;
+    @apply font-bold my-4;
     color: var(--color-darkearth);
   }
 
   h2 {
-    @apply text-2xl font-bold my-4;
+    @apply font-bold my-4;
     color: var(--color-darkearth);
     border-bottom: 2px dotted var(--color-forest);
   }
